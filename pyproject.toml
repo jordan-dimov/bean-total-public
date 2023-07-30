@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "bean-total-public"
+version = "0.1.0"
+description = "Accounting automation software system"
+authors = ["Jordan Dimov <jdimov@a115.co.uk>"]
+license = "Creative Commons"
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.1"
+uvicorn = "^0.23.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ruff = "^0.0.280"
+ipdb = "^0.13.13"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
