@@ -11,6 +11,13 @@ To install dependencies, run:
 $ poetry install
 ```
 
+To run the FastAPI app, use:
+
+```bash
+poetry run gunicorn -k uvicorn.workers.UvicornWorker src.main:app
+```
+
+
 ## Contributing
 
 The main code is in the `src/` directory. Tests are in the `tests/` directory.
