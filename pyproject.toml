@@ -14,6 +14,11 @@ sqlalchemy = "^2.0.19"
 psycopg = {extras = ["binary"], version = "^3.1.10"}
 gunicorn = "^21.2.0"
 loguru = "^0.7.1"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+uvicorn = "^0.23.2"
+python-multipart = "^0.0.6"
+typer = "^0.9.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -21,6 +26,17 @@ black = "^23.7.0"
 ruff = "^0.0.280"
 ipdb = "^0.13.13"
 pytest = "^7.4.0"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+select = [
+    "A", "B", "C", "E", "F", "G", "I", "N", "Q", "S", "W", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "EXE", "FBT",
+    "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH",
+    "TID", "TRY" , "UP", "YTT"
+]
+ignore = ['E501', ]
+
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,11 +1,12 @@
+import os
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-import os
-
 SQLALCHEMY_DATABASE_URL = os.environ["PGDB_URI"].replace(
-    "postgresql://", "postgresql+psycopg://"
+    "postgresql://",
+    "postgresql+psycopg://",
 )
 
 engine = create_engine(
